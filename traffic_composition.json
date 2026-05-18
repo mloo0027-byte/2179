@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Vehicle Type Composition in Traffic in 2024",
+  "width": 400,
+  "height": 460,
+  "data": {
+    "url": "traffic_composition.csv"
+  },
+  "mark": {"type": "arc", "outerRadius": 80, "tooltip": true},
+  "encoding": {
+    "theta": {
+      "field": "average_traffic_composition",
+      "type": "quantitative",
+      "stack": true
+    },
+    "color": {
+      "field": "Vehicle",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "motorcycle", 
+          "Car/Taxi", 
+          "medium_lorry", 
+          "heavy_lorry", 
+          "bus",
+          "light_lorry"
+        ],
+        "range": [
+          "#FFCC00", 
+          "#89D4FF", 
+          "#1F6F5F", 
+          "#982598", 
+          "#E87F24",
+          "#FE9EC7"
+        ]
+      }
+    },
+    "order": {
+      "field": "average_traffic_composition",
+      "type": "quantitative",
+      "sort": "descending"
+    },
+    "tooltip": [
+      {"field": "Vehicle", "type": "nominal", "title": "Vehicle Type"},
+      {
+        "field": "average_traffic_composition",
+        "type": "quantitative",
+        "title": "Percentage",
+        "format": ".1f"
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Carbon Dioxide Emission in Asean Countries in 2024",
+  "width": 400,
+  "data": {
+    "url": "co2_emission_2024.csv"
+  },
+
+  "encoding": {
+    "y": {
+  "field": "country", 
+  "type": "nominal", 
+  "sort": "-x", 
+  "title": "Country"
+},
+    "x": {
+      "field": "CO2_emission", 
+      "type": "quantitative", 
+      "title": "CO2 Emissions (Million Tonnes)"
+    }
+  },
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "color": {
+          "field": "CO2_emission",
+          "type": "quantitative",
+          "scale": {"scheme": "reds"},
+          "title": "Emission Intensity"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "xOffset": 5,
+        "aria": false
+      },
+      "encoding": {
+        "text": {"field": "CO2_emission", "type": "quantitative", "format": ".1f"},
+        "color": {"value": "black"}
+      }
+    }
+  ]
+}

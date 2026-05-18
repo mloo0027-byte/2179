@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "co2_emission_transport.csv"},
+  
+  "transform": [
+    { "filter": "datum.country == 'Malaysia'" },
+    { "calculate": "year(datum.year)", "as": "year_num" }
+  ],
+
+  "params": [
+    {
+      "name": "start_year",
+      "value": 1990,
+      "bind": {"input": "range", "min": 1990, "max": 2022, "step": 1, "name": "Start Year: "}
+    },
+    {
+      "name": "end_year",
+      "value": 2023,
+      "bind": {"input": "range", "min": 1990, "max": 2022, "step": 1, "name": "End Year: "}
+    }
+  ],
+
+  "vconcat": [{
+    "width": 480,
+    "mark": "area",
+    "transform": [
+      { "filter": "datum.year_num >= start_year && datum.year_num <= end_year" }
+    ],
+    "encoding": {
+      "x": {
+        "field": "year",
+        "type": "temporal",
+        "axis": {"title": ""}
+      },
+      "y": {"field": "co2_emission", "type": "quantitative"}
+    }
+  }, {
+    "width": 480,
+    "height": 60,
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "field": "year",
+        "type": "temporal"
+      },
+      "y": {
+        "field": "co2_emission",
+        "type": "quantitative",
+        "axis": {"tickCount": 3, "grid": false}
+      }
+    }
+  }]
+}

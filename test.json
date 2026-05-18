@@ -1,0 +1,48 @@
+// this is for the station names
+
+//https://github.com/hunhonn/MRT_LRT_Coordinates_Malaysia/blob/main/MRT_Stations/Stations_MRT_Putrajaya.csv
+ 
+ {
+      "name": "Station_Labels",
+      "data": {"url": "LRT_Kelana_Jaya_Linestring.csv"},
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "fontSize": 10,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "text": {"field": "Stop Name", "type": "nominal"}, 
+        "color": {"value": "#333"}
+      }
+    }
+
+
+
+    {
+  "name": "KTM_Intercity",
+  "data": {
+    "url": "KTM_Intercity_Stations_Coordinates.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Longitude": "number",
+        "Latitude": "number"
+      }
+    }
+  },
+  "mark": {
+    "type": "line", 
+    "strokeWidth": 2, 
+    "color": "#003366",
+    "strokeDash": [4, 4] 
+  },
+  "encoding": {
+    "longitude": {"field": "Longitude", "type": "quantitative"},
+    "latitude": {"field": "Latitude", "type": "quantitative"}
+  }
+}

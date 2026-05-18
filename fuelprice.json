@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Fuel Price in 2024",
+  "width": 600,
+  "height": 400,
+  "data": {
+  "url": "fuelprice.csv",
+  "format": {
+    "parse": {
+      "date": "date:'%d/%m/%Y'"
+    }
+  }
+},
+  "transform": [
+    {
+      "fold": ["ron95", "ron97", "diesel", "diesel_eastmsia"],
+      "as": ["fuel_type", "price"]
+    },
+    {"filter": "datum.price > 0"}
+  ],
+  "mark": {
+    "type": "line",
+    "point": true,
+    "tooltip": true,
+    "interpolate": "monotone"
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "timeUnit": "yearmonthdate",
+      "title": "Date (2024)",
+      "axis": {"format": "%b %d", "labelAngle": -45}
+    },
+    "y": {
+      "field": "price",
+      "type": "quantitative",
+      "title": "Price (RM/Litre)",
+      "scale": {"zero": false}
+    },
+    "color": {
+      "field": "fuel_type",
+      "type": "nominal",
+      "scale": {
+        "domain": ["ron95", "ron97", "diesel", "diesel_eastmsia"],
+        "range": ["#FFD700", "#355E3B", "#000000", "#2F4F4F "]
+      },
+      "legend": {"title": "Fuel Type"}
+    }
+  }
+}

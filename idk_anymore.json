@@ -1,0 +1,104 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "data": {
+    "url": "vehicle_registration.csv"
+  },
+
+  "layer": [
+
+    {
+      "transform": [
+        {
+          "fold": [
+            "registration_2023",
+            "registration_2024"
+          ],
+          "as": ["year", "registrations"]
+        }
+      ],
+
+      "mark": "bar",
+
+      "encoding": {
+
+        "x": {
+          "field": "vehicle_type",
+          "type": "nominal",
+          "title": "Vehicle Type"
+        },
+
+        "y": {
+          "field": "registrations",
+          "type": "quantitative",
+          "title": "Number of Registrations"
+        },
+
+        "xOffset": {
+          "field": "year"
+        },
+
+        "color": {
+          "field": "year",
+          "type": "nominal",
+          "title": "Year"
+        },
+
+        "tooltip": [
+          {"field": "vehicle_type", "title": "Vehicle Type"},
+          {"field": "year", "title": "Year"},
+          {"field": "registrations", "title": "Registrations"}
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 3
+      },
+
+      "encoding": {
+
+        "x": {
+          "field": "vehicle_type",
+          "type": "nominal"
+        },
+
+        "y": {
+          "field": "percentage_increase",
+          "type": "quantitative",
+          "title": "Percentage Increase (%)",
+          "scale": {
+            "domain": [-10, 120]
+          }
+        },
+
+        "color": {
+          "value": "red"
+        },
+
+        "tooltip": [
+          {"field": "vehicle_type", "title": "Vehicle Type"},
+          {
+            "field": "percentage_increase",
+            "title": "Percentage Increase (%)"
+          }
+        ]
+      }
+    }
+
+  ],
+
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  },
+
+  "width": 700,
+  "height": 400
+
+  
+}

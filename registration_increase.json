@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Increase in Vehicle Registration",
+  "width": 300,
+  "height": 300,
+  "data": {
+    "url": "vehicle_registration.csv"
+  },
+  "encoding": {
+    "y": {
+      "field": "vehicle_type",
+      "type": "nominal",
+      "title": "Vehicle Type",
+      "sort": "-x"
+    },
+    "x": {
+      "field": "percentage_increase",
+      "type": "quantitative",
+      "title": "Change in Registrations from Previous Year",
+      "axis": {"format": "d", "grid": false}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "rule", "color": "lightgrey"},
+      "encoding": {"x": {"datum": 0}}
+    },
+    {
+      "mark": {"type": "bar", "height": 2},
+      "encoding": {
+        "color": {
+          "condition": {"test": "datum.percentage_increase > 0", "value": "#8e44ad"},
+          "value": "#f1c40f"
+        }
+      }
+    },
+    {
+      "mark": {"type": "point", "size": 200, "filled": true},
+      "encoding": {
+        "color": {
+          "condition": {"test": "datum.percentage_increase > 0", "value": "#7d3c98"},
+          "value": "#f39c12"
+        }
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": 12, "fontWeight": "bold"},
+      "encoding": {
+        "text": {"field": "percentage_increase", "type": "quantitative", "format": "+.1f"},
+        "color": {
+          "condition": {"test": "datum.percentage_increase > 0", "value": "#5b2c6f"},
+          "value": "#d4ac0d"
+        }
+      }
+    }
+  ]
+}

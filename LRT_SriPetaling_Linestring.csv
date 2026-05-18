@@ -1,0 +1,32 @@
+ID,Geometry,Stop Name,Station Code,Service Provider Name,Route Name,Longitude,Latitude
+1,Linestring,Sentul Timur,SP1 / AG1,Rapid KL,Sri Petaling Line / Ampang Line,101.69535,3.18594
+2,Linestring,Sentul,SP2 / AG2,Rapid KL,Sri Petaling Line / Ampang Line,101.69528,3.17833
+3,Linestring,Titiwangsa,SP3,Rapid KL,Sri Petaling Line,101.69556,3.1733
+4,Linestring,PWTC,SP4 ,Rapid KL,Sri Petaling Line,101.69333,3.16639
+5,Linestring,Sultan Ismail,SP5,Rapid KL,Sri Petaling Line,101.69389,3.16111
+6,Linestring,Bandaraya,SP6,Rapid KL,Sri Petaling Line,101.69417,3.15556
+7,Linestring,Masjid Jamek,SP7,Rapid KL,Sri Petaling Line,101.69642,3.14967
+8,Linestring,Plaza Rakyat,SP8,Rapid KL,Sri Petaling Line,101.70139,3.14444
+9,Linestring,BBCC-Hang Tuah,SP9,Rapid KL,Sri Petaling Line,101.70583,3.14
+10,Linestring,Pudu,SP10,Rapid KL,Sri Petaling Line,101.712,3.13494
+11,Linestring,Chan Sow Lin,SP11,Rapid KL,Sri Petaling Line,101.71528,3.12778
+12,Linestring,Cheras,SP12,Rapid KL,Sri Petaling Line,101.71417,3.1125
+13,Linestring,Salak Selatan,SP13,Rapid KL,Sri Petaling Line,101.70611,3.10194
+14,Linestring,Bandar Tun Razak,SP14,Rapid KL,Sri Petaling Line,101.71222,3.08972
+15,Linestring,Bandar Tasik Selatan,SP15,Rapid KL,Sri Petaling Line,101.71056,3.07611
+16,Linestring,Sungai Besi,SP16,Rapid KL,Sri Petaling Line,101.708,3.06394
+17,Linestring,Bukit Jalil,SP17,Rapid KL,Sri Petaling Line,101.69194,3.05806
+18,Linestring,Sri Petaling,SP18,Rapid KL,Sri Petaling Line,101.68694,3.06139
+19,Linestring,Awan Besar,SP19,Rapid KL,Sri Petaling Line,101.6706,3.0621
+20,Linestring,Muhibbah,SP20,Rapid KL,Sri Petaling Line,101.6625,3.06206
+21,Linestring,Alam Sutera,SP21,Rapid KL,Sri Petaling Line,101.65644,3.05478
+22,Linestring,Kinrara BK5,SP22,Rapid KL,Sri Petaling Line,101.64422,3.05056
+23,Linestring,Kinrara BK3,SP23,Rapid KL,Sri Petaling Line
+24,Linestring,IOI Puchong Jaya,SP24,Rapid KL,Sri Petaling Line,101.62089,3.04808
+25,Linestring,Pusat Bandar Puchong,SP25,Rapid KL,Sri Petaling Line,101.61603,3.03328
+26,Linestring,Taman Perindustrian Puchong,SP26,Rapid KL,Sri Petaling Line,101.6135,3.02286
+27,Linestring,Bandar Puteri,SP27,Rapid KL,Sri Petaling Line,101.61283,3.01706
+28,Linestring,Puchong Perdana,SP28,Rapid KL,Sri Petaling Line,101.60497,3.00778
+29,Linestring,Puchong Prima,SP29,Rapid KL,Sri Petaling Line,101.59669,2.99994
+30,Linestring,Kampung Sri Aman,SP30,Rapid KL,Sri Petaling Line
+31,Linestring,Putra Heights,SP31 / KJ37,Rapid KL,Sri Petaling Line,101.57556,2.99606

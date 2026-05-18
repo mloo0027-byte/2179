@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "rail_class.csv"
+  },
+  "transform": [
+    {
+      "calculate": "{'First': '🥇', 'Second': '🥈', 'Third': '🥉', 'Business': '💼', 'Platinum': '💎', 'Gold': '🌟', 'Silver': '🥈'}[datum.class]",
+      "as": "emoji"
+    },
+    {
+      "calculate": "ceil(datum.passenger_in_2024 / 200)",
+      "as": "scaled_count"
+    },
+    {
+      "calculate": "sequence(1, datum.scaled_count + 1)",
+      "as": "draw_rank"
+    },
+    {"flatten": ["draw_rank"]}
+  ],
+  "mark": {"type": "text", "baseline": "middle", "size": 25},
+  "encoding": {
+    "row": {
+      "field": "type", 
+      "type": "nominal", 
+      "header": {"title": null, "labelOrient": "top", "labelAnchor": "start", "labelFontSize": 16}
+    },
+    "y": {
+      "field": "class", 
+      "type": "nominal", 
+      "axis": {"title": null}
+    },
+    "x": {
+      "field": "draw_rank", 
+      "type": "quantitative", 
+      "axis": {"title": "Passengers (1 icon = 200 people)"}
+    },
+    "text": {"field": "emoji"}
+  },
+  "resolve": {
+    "scale": {"y": "independent"}
+  },
+  "config": {
+    "view": {"stroke": null}
+  }
+}

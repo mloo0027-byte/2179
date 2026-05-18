@@ -1,0 +1,166 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1000,
+  "height": 1000,
+  "projection": {
+    "type": "mercator",
+    "center": [104.5, 4.1],
+    "scale": 5500 
+  },
+  "view": {"stroke": "transparent"},
+  "layer": [
+    {
+      "name": "Background_Map",
+      "data": {
+        "url": "malaysia_states.topojson",
+        "format": {"type": "topojson", "feature": "states"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#eee",
+        "stroke": "white",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "name": "Kelana_Jaya_Line",
+      "data": {
+        "url": "LRT_Kelana_Jaya_Linestring.csv",
+        "format": {"type": "csv", "parse": {"ID": "number"}}
+      },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3,
+        "color": "#ef4135"
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "order": {"field": "ID", "type": "quantitative"}
+      }
+    },
+    {
+      "name": "Ampang_Line",
+      "data": {
+        "url": "LRT_Ampang_Linestring.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "ID": "number",
+            "Longitude": "number",
+            "Latitude": "number"
+          }
+        }
+      },
+      "transform": [
+        {"filter": "datum.Longitude > 100"} 
+      ],
+      "mark": {
+        "type": "line", 
+        "strokeWidth": 4, 
+        "color": "#ffb81c"
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "order": {"field": "ID", "type": "quantitative"}
+      }
+    },
+
+    {
+  "name": "Sri_Petaling_Line",
+  "data": {
+    "url": "LRT_SriPetaling_Linestring.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "ID": "number",
+        "Longitude": "number",
+        "Latitude": "number"
+      }
+    }
+  },
+  "transform": [
+    {"filter": "datum.Longitude > 100"} 
+  ],
+  "mark": {
+    "type": "line",
+    "strokeWidth": 3,
+    "color": "#65318e" 
+  },
+  "encoding": {
+    "longitude": {"field": "Longitude", "type": "quantitative"},
+    "latitude": {"field": "Latitude", "type": "quantitative"},
+    "order": {"field": "ID", "type": "quantitative"}
+  }
+},
+
+{
+      "name": "KTM_Intercity",
+      "data": {
+        "url": "KTM_Intercity_Stations_Coordinates.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Longitude": "number",
+            "Latitude": "number",
+            "ID": "number",
+            "Line": "string"
+          }
+        }
+      },
+      "transform": [
+        {"filter": "datum.Longitude > 100"}
+      ],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3,
+        "color": "#003366",
+        "tooltip": true
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "order": {"field": "ID", "type": "quantitative"},
+        "detail": {"field": "Line", "type": "nominal"}
+      }
+    },
+
+    {
+  "name": "ktm_komuter",
+  "data": {
+    "url": "ktm_komuter_stations.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Longitude": "number",
+        "Latitude": "number",
+        "ID": "number"
+      }
+    }
+  },
+  "transform": [
+    {"filter": "datum.Longitude > 100"}
+  ],
+  "mark": {
+    "type": "line",
+    "strokeWidth": 3,
+    "interpolate": "linear",
+    "tooltip": true
+  },
+  "encoding": {
+    "longitude": {"field": "Longitude", "type": "quantitative"},
+    "latitude": {"field": "Latitude", "type": "quantitative"},
+    "color": {
+      "field": "Line",
+      "type": "nominal",
+      "scale": {"range": ["#c44ce8", "#1f77b4", "#ff7f0e", "#2ca02c"]}
+    },
+    "order": {"field": "ID", "type": "quantitative"},
+    "detail": {"field": "Line"}
+  }
+}
+
+
+  ]
+}

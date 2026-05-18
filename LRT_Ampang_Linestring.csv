@@ -1,0 +1,20 @@
+﻿ID,Geometry,Stop Name,Station Code,Service Provider Name,Route Name,Longitude,Latitude
+1,Linestring,Sentul Timur,AG1 / SP1 ,Rapid KL,Ampang Line / Sri Petaling Line,101.69528,3.18583
+2,Linestring,Sentul,AG2 / SP2,Rapid KL,Ampang Line / Sri Petaling Line,101.69528,3.17833
+3,Linestring,Titiwangsa,AG3,Rapid KL,Ampang Line,101.69528,3.17306
+4,Linestring,PWTC,AG4,Rapid KL,Ampang Line,101.69333,3.16639
+5,Linestring,Sultan Ismail,AG5,Rapid KL,Ampang Line,101.69389,3.16111
+6,Linestring,Bandaraya,AG6,Rapid KL,Ampang Line,101.69417,3.15556
+7,Linestring,Masjid Jamek,AG7,Rapid KL,Ampang Line,101.69642,3.14967
+8,Linestring,Plaza Rakyat,AG8,Rapid KL,Ampang Line,101.70139,3.14444
+9,Linestring,BBCC Hang Tuah,AG9,Rapid KL,Ampang Line,101.70583,3.14
+10,Linestring,Pudu,AG10,Rapid KL,Ampang Line,101.712,3.13494
+11,Linestring,Chan Sow Lin,AG11,Rapid KL,Ampang Line,101.71528,3.12778
+12,Linestring,Miharja,AG12,Rapid KL,Ampang Line,101.7175,3.12083
+13,Linestring,Maluri,AG13,Rapid KL,Ampang Line,101.72696,3.12326
+14,Linestring,Pandan Jaya,AG14,Rapid KL,Ampang Line,101.73861,3.13
+15,Linestring,Pandan Indah,AG15,Rapid KL,Ampang Line,101.74639,3.13444
+16,Linestring,Cempaka,AG16,Rapid KL,Ampang Line,101.75278,3.13833
+17,Linestring,Cahaya,AG17,Rapid KL,Ampang Line,101.75639,3.14056
+18,Linestring,Ampang,AG18,Rapid KL,Ampang Line,101.76,3.15028
+

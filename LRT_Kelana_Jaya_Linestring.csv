@@ -1,0 +1,38 @@
+ID,Geometry,Stop Name,Station Code,Service Provider Name,Route Name,Longitude,Latitude
+1,Linestring,Gombak,KJ1,Rapid KL,Kelana Jaya Line,101.72442,3.23122
+2,Linestring,Taman Melati,KJ2,Rapid KL,Kelana Jaya Line,101.72167,3.21944
+3,Linestring,Wangsa Maju,KJ3,Rapid KL,Kelana Jaya Line,101.73139,3.20556
+4,Linestring,Sri Rampai,KJ4,Rapid KL,Kelana Jaya Line,101.73694,3.19889
+5,Linestring,Setiawangsa,KJ5,Rapid KL,Kelana Jaya Line,101.73586,3.17571
+6,Linestring,Jelatek,KJ6,Rapid KL,Kelana Jaya Line,101.7353,3.1673
+7,Linestring,Dato’ Keramat,KJ7,Rapid KL,Kelana Jaya Line,101.7317,3.165
+8,Linestring,Damai,KJ8,Rapid KL,Kelana Jaya Line,101.72417,3.16444
+9,Linestring,Ampang Park,KJ9,Rapid KL,Kelana Jaya Line,101.71861,3.15972
+10,Linestring,KLCC,KJ10,Rapid KL,Kelana Jaya Line,101.71389,3.15917
+11,Linestring,Kampung Baru,KJ11,Rapid KL,Kelana Jaya Line,101.70639,3.16111
+12,Linestring,Dang Wangi,KJ12,Rapid KL,Kelana Jaya Line,101.70167,3.15667
+13,Linestring,Masjid Jamek,KJ13,Rapid KL,Kelana Jaya Line,101.69642,3.14967
+14,Linestring,Pasar Seni,KJ14,Rapid KL,Kelana Jaya Line,101.69528,3.1425
+15,Linestring,KL Sentral,KJ15,Rapid KL,Kelana Jaya Line,101.6864,3.1343
+16,Linestring,Bank Rankyat Bangsar,KJ16,Rapid KL,Kelana Jaya Line,101.7017,3.1567
+17,Linestring,Abdullah Hukum,KJ17,Rapid KL,Kelana Jaya Line,101.67278,3.11861
+18,Linestring,Kerinchi,KJ18,Rapid KL,Kelana Jaya Line,101.66806,3.11528
+19,Linestring,Universiti,KJ19,Rapid KL,Kelana Jaya Line,101.66167,3.11444
+20,Linestring,Taman Jaya,KJ20,Rapid KL,Kelana Jaya Line,101.645,3.10389
+21,Linestring,Asia Jaya,KJ21,Rapid KL,Kelana Jaya Line,101.63778,3.10417
+22,Linestring,Taman Paramount,KJ22,Rapid KL,Kelana Jaya Line,101.62306,3.10444
+23,Linestring,Taman Bahagia,KJ23,Rapid KL,Kelana Jaya Line,101.6125,3.11056
+24,Linestring,Kelana Jaya,KJ24,Rapid KL,Kelana Jaya Line,101.60389,3.1125
+25,Linestring,Lembah Subang,KJ25,Rapid KL,Kelana Jaya Line,101.5912,3.1121
+26,Linestring,Ara Damansara,KJ26,Rapid KL,Kelana Jaya Line,101.58647,3.10836
+27,Linestring,Glenmarie,KJ27,Rapid KL,Kelana Jaya Line,101.5905,3.0958
+28,Linestring,Subang Jaya,KJ28,Rapid KL,Kelana Jaya Line,101.58806,3.08472
+29,Linestring,SS 15,KJ29,Rapid KL,Kelana Jaya Line,101.5861,3.0758
+30,Linestring,SS 18,KJ30,Rapid KL,Kelana Jaya Line,101.58601,3.06718
+31,Linestring,USJ 7,KJ31,Rapid KL,Kelana Jaya Line,101.59188,3.05489
+32,Linestring,Taipan,KJ32,Rapid KL,Kelana Jaya Line,101.59015,3.04787
+33,Linestring,Wawasan,KJ33,Rapid KL,Kelana Jaya Line,101.58834,3.03509
+34,Linestring,USJ 21,KJ34,Rapid KL,Kelana Jaya Line,101.58222,3.03
+35,Linestring,Alam Megah,KJ35,Rapid KL,Kelana Jaya Line,101.57211,3.02336
+36,Linestring,Subang Alam,KJ36,Rapid KL,Kelana Jaya Line,101.57222,3.00972
+37,Linestring,Putra Heights,KJ37,Rapid KL,Kelana Jaya Line,101.57556,2.99606
