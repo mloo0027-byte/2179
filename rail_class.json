@@ -3,6 +3,10 @@
   "data": {
     "url": "rail_class.csv"
   },
+
+  "width": 500,
+  "height": 100,
+
   "transform": [
     {
       "calculate": "{'First': '🥇', 'Second': '🥈', 'Third': '🥉', 'Business': '💼', 'Platinum': '💎', 'Gold': '🌟', 'Silver': '🥈'}[datum.class]",

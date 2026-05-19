@@ -22,7 +22,7 @@
 
   "vconcat": [{
     "width": 480,
-    "mark": "area",
+    "mark": {"type": "area", "color": "#AD5C71"}, 
     "transform": [
       { "filter": "datum.year_num >= start_year && datum.year_num <= end_year" }
     ],
@@ -37,7 +37,7 @@
   }, {
     "width": 480,
     "height": 60,
-    "mark": "area",
+    "mark": {"type": "area", "color": "#AD5C71"}, 
     "encoding": {
       "x": {
         "field": "year",
