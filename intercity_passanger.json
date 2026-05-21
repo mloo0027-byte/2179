@@ -24,7 +24,8 @@
           "param": "brush", "value": 1
         },
         "value": 0.7
-      }
+      },
+      "color": {"value": "#FB9B8F"} 
     }
   }, {
     "transform": [{
@@ -42,4 +43,3 @@
     }
   }]
 }
-

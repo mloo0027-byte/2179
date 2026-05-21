@@ -1,13 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
   "width": 500,
   "height": 400,
-
   "data": {
     "url": "rail_transportation.csv"
   },
-
   "transform": [
     {
       "fold": [
@@ -17,30 +14,28 @@
       "as": ["type", "passengers"]
     }
   ],
-
   "mark": "area",
-
   "encoding": {
-
     "x": {
       "field": "year",
       "type": "ordinal",
       "title": "Year"
     },
-
     "y": {
       "aggregate": "sum",
       "field": "passengers",
       "type": "quantitative",
       "title": "Total Passengers"
     },
-
     "color": {
       "field": "type",
       "type": "nominal",
-      "title": "Rail Type"
+      "title": "Rail Type",
+      "scale": {
+        "domain": ["urban_passenger", "intercity_passenger"],
+        "range": ["#9CD5FF", "#FB9B8F"] 
+      }
     },
-
     "tooltip": [
       {"field": "year"},
       {"field": "type"},
