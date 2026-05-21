@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "rail_transportation.csv"},
-  "width": 500,
-  "height": 300,
+  "width": 600,
+  "height": 200,
   "layer": [{
     "params": [{
       "name": "brush",

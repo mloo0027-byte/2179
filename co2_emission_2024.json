@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Carbon Dioxide Emission in Asean Countries in 2024",
   "width": 400,
-  "height": 350,
+  "height": 250,
   "data": {
     "url": "co2_emission_2024.csv"
   },
