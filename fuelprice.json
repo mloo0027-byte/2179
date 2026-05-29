@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Fuel Price in 2024",
-  "width": 600,
+  "width": 500,
   "height": 400,
   "data": {
   "url": "fuelprice.csv",
@@ -43,7 +43,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["ron95", "ron97", "diesel", "diesel_eastmsia"],
-        "range": ["#FFD700", "#355E3B", "#000000", "#2F4F4F "]
+        "range": ["#FFD700", "#D51C39", "#2C5EAD", "#8A5F41 "]
       },
       "legend": {"title": "Fuel Type"}
     }

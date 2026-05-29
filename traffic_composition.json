@@ -6,7 +6,7 @@
   "data": {
     "url": "traffic_composition.csv"
   },
-  "mark": {"type": "arc", "outerRadius": 80, "tooltip": true},
+  "mark": {"type": "arc", "outerRadius": 160, "tooltip": true},
   "encoding": {
     "theta": {
       "field": "average_traffic_composition",
@@ -18,12 +18,12 @@
       "type": "nominal",
       "scale": {
         "domain": [
-          "motorcycle", 
+          "Motorcycle", 
           "Car/Taxi", 
-          "medium_lorry", 
-          "heavy_lorry", 
-          "bus",
-          "light_lorry"
+          "MediumLorry", 
+          "HeavyLorry", 
+          "Bus",
+          "LightLorry"
         ],
         "range": [
           "#FFCC00", 

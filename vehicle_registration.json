@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Vehicle Registrations in 2023 and 2024",
-  "width": 400,
+  "width": 330,
   "height": 250,
   "data": {
     "url": "vehicle_registration.csv"
