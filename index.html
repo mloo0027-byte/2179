@@ -236,20 +236,25 @@
 
 <div style="display: flex; flex-direction: row; gap: 20px; width: 100%; align-items: flex-start; box-sizing: border-box; margin-top: 40px; border: 2px solid #000000; border-radius: 8px; padding: 24px; background-color: #ffffff;">
 
-    <div style="display: flex; flex-direction: column; flex-grow: 1; min-width: 0; background-color: #fafafa; border: 1px solid #eee; border-radius: 8px; padding: 20px; box-sizing: border-box;">
+    <div style="display: flex; flex-direction: row; gap: 20px; flex-grow: 1; min-width: 0; background-color: #fafafa; border: 1px solid #eee; border-radius: 8px; padding: 20px; box-sizing: border-box; align-items: center;">
         
-        <div style="width: 100%; height: 350px; position: relative; display: flex; justify-content: center;">
-            <div id="urban_passenger" style="width: 100%; height: 100%;"></div>
+        <div style="display: flex; flex-direction: column; flex: 1; min-width: 0;">
+            <div style="width: 100%; height: 350px; position: relative; display: flex; justify-content: center;">
+                <div id="urban_passenger" style="width: 100%; height: 100%;"></div>
+            </div>
+            
+            <div style="width: 100%; height: 250px; position: relative; margin-top: -100px; display: flex; justify-content: center;">
+                <div id="intercity_passanger" style="width: 100%; height: 100%;"></div>
+            </div>
         </div>
-        
-        <div style="width: 100%; height: 250px; position: relative; margin-top: -100px; display: flex; justify-content: center;">
-            <div id="intercity_passanger" style="width: 100%; height: 100%;"></div>
+
+        <div style="flex: 1; min-width: 0; display: flex; justify-content: center; align-items: center; padding: 10px; transform: translateX(160px);">
+            <div id="total_passenger" style="width: 100%;"></div>
         </div>
         
     </div>
 
     <div style="width: 300px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #ffffff; box-sizing: border-box; flex-shrink: 0; font-family: 'Arial', sans-serif;">
-
         <h3 style="margin-top: 0; font-size: 18px; color: #111111; font-family: 'Georgia', serif;">Urban Passenger</h3>
         <p style="font-family: Arial, sans-serif; line-height: 1.5; margin-bottom: 24px;">
             Urban passenger numbers plummeted in 2021 and have essentially decreased far below their pre-pandemic high. Urban passenger transit remains stagnated, failing to recover even half of its pre-pandemic volume—likely due to the permanent rise of hybrid and remote work.
@@ -259,7 +264,6 @@
         <p style="font-family: Arial, sans-serif; line-height: 1.5; margin-bottom: 0;">
             Intercity passenger numbers experienced the same decrease in 2021 due to the pandemic, however instead of being stagnant, the number of passengers increased and hit above average of 5 years in 2022.
         </p>
-
     </div>
 
 </div>

@@ -46,3 +46,7 @@ vegaEmbed("#registration_increase", vg_10).then(function(result) {
 var vg_11 = "rail_transit_map.json";
 vegaEmbed("#rail_transit_map", vg_11).then(function(result) {
 }).catch(console.error);
+
+var vg_12 = "total_passenger.json";
+vegaEmbed("#total_passenger", vg_12).then(function(result) {
+}).catch(console.error);
