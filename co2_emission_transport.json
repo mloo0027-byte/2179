@@ -21,7 +21,7 @@
   ],
 
   "vconcat": [{
-    "width": 480,
+    "width": 420,
     "mark": {"type": "area", "color": "#AD5C71"}, 
     "transform": [
       { "filter": "datum.year_num >= start_year && datum.year_num <= end_year" }
@@ -35,7 +35,7 @@
       "y": {"field": "co2_emission", "type": "quantitative"}
     }
   }, {
-    "width": 480,
+    "width": 360,
     "height": 60,
     "mark": {"type": "area", "color": "#AD5C71"}, 
     "encoding": {
