@@ -1,8 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Vehicle Registrations in 2023 and 2024",
-  "width": 330,
-  "height": 250,
+  
+  "width": "container",
+  "height": "container",
+  
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  
   "data": {
     "url": "vehicle_registration.csv"
   },
@@ -35,6 +42,5 @@
       { "field": "year", "type": "nominal" },
       { "field": "count", "type": "quantitative" }
     ]
-    
   }
 }

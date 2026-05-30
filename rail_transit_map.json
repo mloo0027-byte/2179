@@ -2,11 +2,50 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 1000,
   "height": 1000,
+  "background": "#a5c9eb",
+  
+  "params": [
+    {
+      "name": "zoom_level",
+      "value": 4000,
+      "bind": {
+        "input": "range",
+        "min": 1000,
+        "max": 30000,
+        "step": 500,
+        "name": "Zoom Scale: "
+      }
+    },
+    {
+      "name": "map_center",
+      "value": [104.5, 4.1],
+      "bind": {
+        "input": "select",
+        "options": [
+          [104.5, 4.1],
+          [101.69, 3.14],
+          [100.33, 5.41],
+          [110.36, 1.55],
+          [116.07, 5.98]
+        ],
+        "labels": [
+          "Whole Malaysia", 
+          "Kuala Lumpur / Klang Valley", 
+          "Penang", 
+          "Kuching (Sarawak)", 
+          "Kota Kinabalu (Sabah)"
+        ],
+        "name": "Center Focus: "
+      }
+    }
+  ],
+
   "projection": {
     "type": "mercator",
-    "center": [104.5, 4.1],
-    "scale": 3000
+    "center": {"expr": "map_center"},
+    "scale": {"expr": "zoom_level"}
   },
+  
   "view": {"stroke": "transparent"},
   "layer": [
     {
@@ -29,6 +68,11 @@
         "fill": "#f9f9f9",
         "stroke": "white",
         "strokeWidth": 1.5
+      },
+      "encoding": {
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "State"}
+        ]
       }
     },
     {
@@ -45,7 +89,8 @@
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
-        "order": {"field": "ID", "type": "quantitative"}
+        "order": {"field": "ID", "type": "quantitative"},
+        "tooltip": {"value": "Kelana Jaya Line"}
       }
     },
     {
@@ -72,7 +117,8 @@
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
-        "order": {"field": "ID", "type": "quantitative"}
+        "order": {"field": "ID", "type": "quantitative"},
+        "tooltip": {"value": "Ampang Line"}
       }
     },
     {
@@ -99,7 +145,8 @@
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
-        "order": {"field": "ID", "type": "quantitative"}
+        "order": {"field": "ID", "type": "quantitative"},
+        "tooltip": {"value": "Sri Petaling Line"}
       }
     },
     {
@@ -122,14 +169,16 @@
       "mark": {
         "type": "line",
         "strokeWidth": 3,
-        "color": "#003366",
-        "tooltip": true
+        "color": "#003366"
       },
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "order": {"field": "ID", "type": "quantitative"},
-        "detail": {"field": "Line", "type": "nominal"}
+        "detail": {"field": "Line", "type": "nominal"},
+        "tooltip": [
+          {"field": "Line", "type": "nominal", "title": "KTM Intercity Line"}
+        ]
       }
     },
     {
@@ -151,8 +200,7 @@
       "mark": {
         "type": "line",
         "strokeWidth": 3,
-        "interpolate": "linear",
-        "tooltip": true
+        "interpolate": "linear"
       },
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
@@ -163,7 +211,10 @@
           "scale": {"range": ["#c44ce8", "#1f77b4", "#ff7f0e", "#2ca02c"]}
         },
         "order": {"field": "ID", "type": "quantitative"},
-        "detail": {"field": "Line"}
+        "detail": {"field": "Line"},
+        "tooltip": [
+          {"field": "Line", "type": "nominal", "title": "KTM Komuter Line"}
+        ]
       }
     }
   ]

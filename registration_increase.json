@@ -1,8 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Increase in Vehicle Registration",
-  "width": 400,
-  "height": 300,
+  
+  "width": "container",
+  "height": "container",
+  
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  
   "data": {
     "url": "vehicle_registration.csv"
   },

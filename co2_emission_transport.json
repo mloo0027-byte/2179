@@ -2,6 +2,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "co2_emission_transport.csv"},
   
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+  
   "transform": [
     { "filter": "datum.country == 'Malaysia'" },
     { "calculate": "year(datum.year)", "as": "year_num" }
@@ -20,34 +25,38 @@
     }
   ],
 
-  "vconcat": [{
-    "width": 420,
-    "mark": {"type": "area", "color": "#AD5C71"}, 
-    "transform": [
-      { "filter": "datum.year_num >= start_year && datum.year_num <= end_year" }
-    ],
-    "encoding": {
-      "x": {
-        "field": "year",
-        "type": "temporal",
-        "axis": {"title": ""}
-      },
-      "y": {"field": "co2_emission", "type": "quantitative"}
-    }
-  }, {
-    "width": 360,
-    "height": 60,
-    "mark": {"type": "area", "color": "#AD5C71"}, 
-    "encoding": {
-      "x": {
-        "field": "year",
-        "type": "temporal"
-      },
-      "y": {
-        "field": "co2_emission",
-        "type": "quantitative",
-        "axis": {"tickCount": 3, "grid": false}
+  "vconcat": [
+    {
+      "width": "container",
+      "height": 250, 
+      "mark": {"type": "area", "color": "#AD5C71"}, 
+      "transform": [
+        { "filter": "datum.year_num >= start_year && datum.year_num <= end_year" }
+      ],
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "temporal",
+          "axis": {"title": ""}
+        },
+        "y": {"field": "co2_emission", "type": "quantitative"}
+      }
+    }, 
+    {
+      "width": "container",
+      "height": 60,
+      "mark": {"type": "area", "color": "#AD5C71"}, 
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "co2_emission",
+          "type": "quantitative",
+          "axis": {"tickCount": 3, "grid": false}
+        }
       }
     }
-  }]
+  ]
 }

@@ -1,8 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Total passenger bar chart mapping correct fields from total_passenger.csv.",
-  "width": 280,
-  "height": 480,
+  
+  "width": "container",
+  "height": "container",
+  
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  
   "data": {
     "url": "total_passenger.csv"
   },

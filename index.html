@@ -42,9 +42,8 @@
     margin-left: 0px; 
     width: 100%; 
     box-sizing: border-box; 
-    align-items: stretch;">
-
-    <div style="border: 2px solid #000000; background-color: #f9f9f9; padding: 20px; width: 280px; border-radius: 8px; flex-shrink: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 15px;">
+    align-items: stretch;
+    flex-wrap: wrap;"> <div style="border: 2px solid #000000; background-color: #f9f9f9; padding: 20px; width: 280px; border-radius: 8px; flex-shrink: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 15px;">
         <h2 style="margin-top: 0; margin-bottom: 0; color: #e74c3c; font-family: 'Georgia', serif; font-size: 25px;">
             DID YOU KNOW?
         </h2>
@@ -59,10 +58,10 @@
         </p>
     </div>
 
-    <div style="flex: 1; min-width: 0; border: 1px solid #eee; padding: 15px; border-radius: 8px; background-color: #fafafa; position: relative;">
-        <div id="vehicle_registration" style="width: 100%; height: 100%;"></div>
+    <div style="flex: 1; min-width: 250px; border: 1px solid #eee; padding: 15px; border-radius: 8px; background-color: #fafafa; position: relative;">
+        <div id="vehicle_registration" style="width: 100%; height: 100%; min-height: 300px;"></div>
         
-        <div style="position: absolute; top: 160px; right: 130px; width: 140px; 
+        <div style="position: absolute; top: 45%; right: 20%; width: 140px; 
                     background: rgba(255, 255, 255, 0.95); border: 1px solid #ccc; 
                     border-radius: 5px; padding: 10px; font-family: 'Arial', sans-serif; 
                     font-size: 12px; pointer-events: none; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); z-index: 10;">
@@ -73,10 +72,10 @@
         </div>
     </div>
 
-    <div style="flex: 1; min-width: 0; border: 1px solid #eee; padding: 15px; border-radius: 8px; background-color: #fafafa; position: relative;">
-        <div id="registration_increase" style="width: 100%; height: 100%;"></div>
+    <div style="flex: 1; min-width: 250px; border: 1px solid #eee; padding: 15px; border-radius: 8px; background-color: #fafafa; position: relative;">
+        <div id="registration_increase" style="width: 100%; height: 100%; min-height: 300px;"></div>
 
-        <div style="position: absolute; bottom: 150px; right: 180px; width: 150px; 
+        <div style="position: absolute; bottom: 40%; right: 25%; width: 150px; 
                     background: rgba(255, 255, 255, 0.95); border: 1px solid #ccc; 
                     border-radius: 5px; padding: 10px; font-family: 'Arial', sans-serif; 
                     font-size: 12px; pointer-events: none; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); z-index: 10;">
@@ -88,7 +87,6 @@
     </div>
 
 </div>
-
 
 
 
@@ -110,8 +108,8 @@
 <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 15px;">
     
     <div style="border-left: 6px solid #444444; padding-left: 14px; font-family: sans-serif; font-size: 22px; line-height: 1.5; color: #333333; max-width: 530px;">
-      Cars and taxis dominate daily road transit, making private vehicle owners highly sensitive to changes in nationwide fuel subsidy policies.
-    </div>
+    Although <span style="color: #E87F24; font-weight: bold;">bus</span> has the highest increase in registration, <span style="color: #89D4FF; font-weight: bold;">Car</span> still dominates daily road transit. Malaysians should utilise the bus facility more.
+</div>
 
     <div id="traffic_composition" style="flex: 1; border: 1px solid #eee; padding: 10px; border-radius: 8px; background-color: #fafafa; position: relative;">
     </div>
@@ -248,9 +246,11 @@
             </div>
         </div>
 
-        <div style="flex: 1; min-width: 0; display: flex; justify-content: center; align-items: center; padding: 10px; transform: translateX(160px);">
-            <div id="total_passenger" style="width: 100%;"></div>
-        </div>
+        <div style="flex: 0.5; min-width: 250px; border: 1px solid #eee; padding: 15px; border-radius: 8px; background-color: #fafafa; position: relative; display: flex; align-items: center; justify-content: center;">
+    
+    <div id="total_passenger" style="width: 100%; height: 500px;"></div>
+
+</div>
         
     </div>
 
@@ -270,9 +270,22 @@
 
 
 
-    <div style="background-color: #fafafa; border: 1px solid #eee; border-radius: 8px; padding: 24px; margin-top: 40px; display: flex; justify-content: center; align-items: center; box-sizing: border-box; width: 100%;">
+    <div class="map-container" style="
+    background-color: #ffffff; 
+    border: 2px solid #000000; 
+    border-radius: 8px; 
+    padding: 24px; 
+    margin-top: 40px; 
+    margin-left: 0px; 
+    width: 96.5%; 
+    box-sizing: border-box; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;">
     
-    <div id="rail_transit_map"></div>
+    <div id="rail_transit_map" style="width: 100%; height: 100%;"></div>
+
+</div>
 
 </div>
     

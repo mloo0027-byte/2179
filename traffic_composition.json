@@ -1,12 +1,22 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Vehicle Type Composition in Traffic in 2024",
-  "width": 580,
-  "height": 460,
+  
+  "width": "container",
+  "height": 400,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+  
   "data": {
     "url": "traffic_composition.csv"
   },
-  "mark": {"type": "arc", "outerRadius": 160, "tooltip": true},
+  "mark": {
+    "type": "arc", 
+    "outerRadius": {"expr": "min(width, height) / 2.3"}, 
+    "tooltip": true
+  },
   "encoding": {
     "theta": {
       "field": "average_traffic_composition",
@@ -17,22 +27,8 @@
       "field": "Vehicle",
       "type": "nominal",
       "scale": {
-        "domain": [
-          "Motorcycle", 
-          "Car/Taxi", 
-          "MediumLorry", 
-          "HeavyLorry", 
-          "Bus",
-          "LightLorry"
-        ],
-        "range": [
-          "#FFCC00", 
-          "#89D4FF", 
-          "#1F6F5F", 
-          "#982598", 
-          "#E87F24",
-          "#FE9EC7"
-        ]
+        "domain": ["Motorcycle", "Car/Taxi", "MediumLorry", "HeavyLorry", "Bus", "LightLorry"],
+        "range": ["#FFCC00", "#89D4FF", "#1F6F5F", "#982598", "#E87F24", "#FE9EC7"]
       }
     },
     "order": {
@@ -42,12 +38,7 @@
     },
     "tooltip": [
       {"field": "Vehicle", "type": "nominal", "title": "Vehicle Type"},
-      {
-        "field": "average_traffic_composition",
-        "type": "quantitative",
-        "title": "Percentage",
-        "format": ".1f"
-      }
+      {"field": "average_traffic_composition", "type": "quantitative", "title": "Percentage", "format": ".1f"}
     ]
   }
 }
