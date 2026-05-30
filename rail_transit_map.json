@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 650,
+  "width": 900,
   "height": 500,
   "background": "#d9e8f5",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
   "params": [
     {
       "name": "zoom_level",
