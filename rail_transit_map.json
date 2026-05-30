@@ -1,9 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1000,
-  "height": 1000,
-  "background": "#a5c9eb",
-  
+  "width": 650,
+  "height": 500,
+  "background": "#d9e8f5",
   "params": [
     {
       "name": "zoom_level",
@@ -24,28 +23,22 @@
         "options": [
           [104.5, 4.1],
           [101.69, 3.14],
-          [100.33, 5.41],
-          [110.36, 1.55],
-          [116.07, 5.98]
+          [100.33, 5.41]
         ],
         "labels": [
-          "Whole Malaysia", 
+          "South China Sea", 
           "Kuala Lumpur / Klang Valley", 
-          "Penang", 
-          "Kuching (Sarawak)", 
-          "Kota Kinabalu (Sabah)"
+          "North Peninsular"
         ],
-        "name": "Center Focus: "
+        "name": "Center Zoom: "
       }
     }
   ],
-
   "projection": {
     "type": "mercator",
     "center": {"expr": "map_center"},
     "scale": {"expr": "zoom_level"}
   },
-  
   "view": {"stroke": "transparent"},
   "layer": [
     {
@@ -76,6 +69,28 @@
       }
     },
     {
+      "name": "Sea_Label",
+      "data": {
+        "values": [
+          {"Longitude": 107.5, "Latitude": 4.5, "Label": "South China Sea"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "sans-serif",
+        "fontSize": 14,
+        "fontStyle": "italic",
+        "fontWeight": "bold",
+        "fill": "#5a7a9e",
+        "align": "center"
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "text": {"field": "Label", "type": "nominal"}
+      }
+    },
+    {
       "name": "Kelana_Jaya_Line",
       "data": {
         "url": "LRT_Kelana_Jaya_Linestring.csv",
@@ -83,13 +98,42 @@
       },
       "mark": {
         "type": "line",
-        "strokeWidth": 3,
-        "color": "#ef4135"
+        "strokeWidth": 3
       },
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "order": {"field": "ID", "type": "quantitative"},
+        "color": {
+          "datum": "Kelana Jaya Line",
+          "scale": {
+            "domain": [
+              "Kelana Jaya Line", 
+              "Ampang Line", 
+              "Sri Petaling Line", 
+              "KTM Intercity Line",
+              "Batu Caves - Tampin",
+              "Butterworth - Ipoh",
+              "Butterworth - Pdg Besar",
+              "Tg Malim - Pel Klang"
+            ],
+            "range": [
+              "#d55e00",
+              "#ffb81c",
+              "#65318e",
+              "#003366",
+              "#cc79a7",
+              "#56b4e9",
+              "#e69f00",
+              "#009e73"
+            ]
+          },
+          "legend": {
+            "title": "Malaysia Transit Networks",
+            "columns": 2,
+            "orient": "right"
+          }
+        },
         "tooltip": {"value": "Kelana Jaya Line"}
       }
     },
@@ -111,13 +155,13 @@
       ],
       "mark": {
         "type": "line", 
-        "strokeWidth": 4, 
-        "color": "#ffb81c"
+        "strokeWidth": 4
       },
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "order": {"field": "ID", "type": "quantitative"},
+        "color": {"datum": "Ampang Line"},
         "tooltip": {"value": "Ampang Line"}
       }
     },
@@ -139,13 +183,13 @@
       ],
       "mark": {
         "type": "line",
-        "strokeWidth": 3,
-        "color": "#65318e" 
+        "strokeWidth": 3
       },
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "order": {"field": "ID", "type": "quantitative"},
+        "color": {"datum": "Sri Petaling Line"},
         "tooltip": {"value": "Sri Petaling Line"}
       }
     },
@@ -168,14 +212,14 @@
       ],
       "mark": {
         "type": "line",
-        "strokeWidth": 3,
-        "color": "#003366"
+        "strokeWidth": 3
       },
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "order": {"field": "ID", "type": "quantitative"},
         "detail": {"field": "Line", "type": "nominal"},
+        "color": {"datum": "KTM Intercity Line"},
         "tooltip": [
           {"field": "Line", "type": "nominal", "title": "KTM Intercity Line"}
         ]
@@ -207,8 +251,7 @@
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "color": {
           "field": "Line",
-          "type": "nominal",
-          "scale": {"range": ["#c44ce8", "#1f77b4", "#ff7f0e", "#2ca02c"]}
+          "type": "nominal"
         },
         "order": {"field": "ID", "type": "quantitative"},
         "detail": {"field": "Line"},
